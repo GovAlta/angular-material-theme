@@ -1,0 +1,39 @@
+{
+  "name": "@abgov/angular-material-theme",
+  "version": "0.0.0",
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GovAlta/angular-material-theme.git"
+  },
+  "keywords": [
+    "GoA",
+    "Alberta Government",
+    "DDI",
+    "angular",
+    "material",
+    "theme"
+  ],
+  "dependencies": {
+    "@abgov/design-tokens": "^1.0.4",
+    "@angular/material": "^15.0.2"
+  },
+  "devDependencies": {
+    "semantic-release": "^19.0.5"
+  },
+  "scripts": {
+    "build": "node index.js",
+    "semantic-release": "semantic-release"
+  },
+  "bugs": {
+    "url": "https://github.com/GovAlta/angular-material-theme/issues"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
