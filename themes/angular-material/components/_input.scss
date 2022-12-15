@@ -1,0 +1,91 @@
+/*********
+Mat Input
+**********/
+.goa-angular {
+  .wrapper {
+    display:flex;
+    align-items: center;
+  }
+  .mat-form-field-type-mat-input {
+    transition: none;
+    &.mat-form-field-appearance-outline {
+      &.mat-form-field-invalid {
+        .mat-form-field-outline-thick {
+          color: $goa-color-interactive-focus;
+        }
+      }
+      &.mat-form-field-disabled {
+        .mat-form-field-outline {
+          background-color: $goa-color-greyscale-100;
+          border-color: $goa-color-greyscale-200;
+        }
+      }
+      .mat-form-field-wrapper {
+        margin: 0;
+      }
+    }
+    .mat-form-field-infix {
+      border-top-width: $goa-border-width-l;
+      padding: 0 0 1em 0;
+      margin-bottom: $goa-spacing-s;
+      height: $goa-line-height-2;
+      input {
+        padding-top: $goa-spacing-s;
+        padding-bottom: $goa-spacing-s;
+        color: $goa-color-text-default;
+        font-size: $goa-font-size-4;
+        line-height: calc($goa-line-height-5 - calc($goa-spacing-xs) * 2);
+        background-color: transparent;
+        &:disabled {
+          color: $goa-color-text-secondary;
+          cursor: default;
+          box-shadow: none;
+        }
+      }
+    }
+    .mat-form-field-suffix {
+      display: flex;
+      align-self: stretch;
+      align-items: center;
+      justify-content: center;
+      width: $goa-spacing-2xl;
+      .mat-icon {
+        cursor: pointer;
+      }
+
+      .suffix-interactive {
+        display: flex;
+        flex: 0 0 auto;
+        align-self: stretch;
+        align-items: center;
+        justify-content: center;
+        width: $goa-spacing-2xl;
+
+        background-color: $goa-color-interactive-default;
+        color: $goa-color-text-light;
+
+        border-radius: 0 $goa-border-radius-4 $goa-border-radius-4 0;
+
+        cursor: pointer;
+
+        .mat-icon {
+          margin-top: -4.5px;
+        }
+      }
+
+      .suffix-clear {
+        .mat-icon {
+          font-size: $goa-font-size-4;
+        }
+      }
+
+      margin-bottom: $goa-spacing-2xs;
+      margin-right: -$goa-spacing-s;
+    }
+
+    .clear-suffix.interactive-suffix .mat-form-field-suffix {
+      width: 2 * $goa-spacing-2xl;
+      margin-right: -$goa-spacing-l;
+    }
+  }
+}

@@ -1,0 +1,157 @@
+/*********
+Mat Button
+**********/
+.goa-angular {
+  button:disabled {
+    pointer-events: none;
+    opacity: $goa-opacity-5;
+  }
+
+  .mat-button .mat-button-wrapper > * {
+    display: inline-block;
+  }
+  .mat-button-ripple{
+    &.mat-ripple:not(:empty) {
+      transform: none;
+    }
+  }
+  // For icon button
+  .mat-icon-button {
+    &.mat-primary {
+      .mat-button-focus-overlay {
+        display:none;
+      }
+    }
+    &.mat-button-base {
+      &.mat-primary:hover, &.cdk-focused {
+        background-color: $goa-color-greyscale-100;
+        border-color: $goa-color-greyscale-100;
+        border-radius: 0.5rem;
+        color: $goa-color-interactive-hover;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+
+  .mat-button-base {
+    font-family: $goa-font-families-default;
+    font-size: $goa-font-size-5;
+    letter-spacing: $goa-letter-spacing-1;
+    padding: 0 $goa-spacing-s;
+    align-items: center;
+    &.tall {
+      height: $goa-spacing-2xl;
+      font-weight: $goa-font-weight-bold;
+    }
+    // Tertiary button
+    &.mat-button {
+      &.mat-primary {
+        text-align: center;
+        letter-spacing: $goa-letter-spacing-1;
+        text-decoration-line: underline;
+        color: $goa-color-interactive-default;
+
+        &:hover {
+          border-color: $goa-color-greyscale-100;
+          color: $goa-color-interactive-hover;
+          background-color: $goa-color-greyscale-100;
+        }
+
+        &:focus {
+          border-color: $goa-color-greyscale-100;
+          background-color: $goa-color-greyscale-100;
+          color: $goa-color-interactive-hover;
+          box-shadow: 0 0 0 3px $goa-color-interactive-focus;
+          outline: none;
+        }
+
+        &.mat-button-disabled {
+          color: $goa-color-interactive-default;
+          background: inherit;
+        }
+      }
+    }
+
+    //Primary button
+    &.mat-raised-button {
+      strong {
+        vertical-align: baseline;
+      }
+
+      &:not([class*=mat-elevation-z]) {
+        box-shadow: none;
+      }
+
+      &.mat-button-disabled {
+        color: $goa-color-text-light;
+
+      }
+
+      &.mat-primary {
+        background: $goa-color-interactive-default;
+
+        &:hover {
+          border-color: $goa-color-interactive-hover;
+          background-color: $goa-color-interactive-hover;
+        }
+
+        &:focus {
+          box-shadow: 0 0 0 3px $goa-color-interactive-focus;
+          border-color: $goa-color-interactive-hover;
+          background-color: $goa-color-interactive-hover;
+          outline: none;
+        }
+      }
+
+      &.mat-warn {
+        background: $goa-color-emergency-default;
+
+        &:not(.mat-button-disabled) {
+          &:hover {
+            background-color: $goa-color-emergency-dark;
+            border-color: $goa-color-emergency-dark;
+          }
+
+          &:focus {
+            background-color: $goa-color-emergency-dark;
+            border-color: $goa-color-emergency-dark;
+            box-shadow: 0 0 0 3px $goa-color-interactive-focus;
+            outline: none;
+            color: $goa-color-text-light;
+          }
+        }
+      }
+    }
+
+    // Secondary button
+    &.mat-stroked-button {
+      background: $goa-color-text-light;
+
+      &.mat-primary {
+        border: $goa-border-width-m solid $goa-color-interactive-default;
+
+        &:hover {
+          border-color: $goa-color-interactive-hover;
+          color: $goa-color-interactive-hover;
+          background-color: $goa-color-greyscale-100;
+        }
+
+        &:focus {
+          border-color: $goa-color-interactive-hover;
+          box-shadow: 0 0 0 3px $goa-color-interactive-focus;
+          background-color: $goa-color-greyscale-100;
+          outline: none;
+        }
+
+        &.mat-button-disabled {
+          background: $goa-color-greyscale-white;
+          border: $goa-border-width-m solid $goa-color-interactive-disabled;
+          color: $goa-color-interactive-disabled;
+        }
+      }
+    }
+  }
+}
+

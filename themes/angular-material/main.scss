@@ -1,0 +1,137 @@
+@use '@angular/material' as mat;
+@import "@abgov/design-tokens/dist/tokens";
+@import "components/card";
+@import "components/button";
+@import "components/chip";
+@import "components/dialog";
+@import "components/checkbox";
+@import "components/dropdown";
+@import "components/input";
+@import "components/radio";
+
+/*Material Theme Colors*/
+$goa-primary-palette: (
+        50: #e0eef8,
+        100: #b3d4ed,
+        200: #80b8e2,
+        300: #4d9bd6,
+        400: #2685cd,
+        500: #0070c4,
+        600: #0068be,
+        700: #005db6,
+        800: #0053af,
+        900: #0041a2,
+        A100: #ccddff,
+        A200: #99baff,
+        A400: #6698ff,
+        A700: #4d87ff,
+        contrast: (
+                50: #000000,
+                100: #000000,
+                200: #000000,
+                300: #000000,
+                400: #ffffff,
+                500: #ffffff,
+                600: #ffffff,
+                700: #ffffff,
+                800: #ffffff,
+                900: #ffffff,
+                A100: #000000,
+                A200: #000000,
+                A400: #000000,
+                A700: #000000,
+        ),
+);
+$primary: mat.define-palette($goa-primary-palette);
+
+$goa-accent-palette: (
+        50: #e0efe7,
+        100: #b3d6c3,
+        200: #80bb9c,
+        300: #4da074,
+        400: #268b56,
+        500: #007738,
+        600: #006f32,
+        700: #00642b,
+        800: #005a24,
+        900: #004717,
+        A100: #7bff98,
+        A200: #48ff70,
+        A400: #15ff48,
+        A700: #00fb37,
+        contrast: (
+                50: #000000,
+                100: #000000,
+                200: #000000,
+                300: #000000,
+                400: #ffffff,
+                500: #ffffff,
+                600: #ffffff,
+                700: #ffffff,
+                800: #ffffff,
+                900: #ffffff,
+                A100: #000000,
+                A200: #000000,
+                A400: #000000,
+                A700: #000000,
+        ),
+);
+$accent: mat.define-palette($goa-accent-palette);
+
+$goa-emergency-palette: mat.$red-palette;
+$warn: mat.define-palette($goa-emergency-palette, 900);
+$goa-typography: mat.define-typography-config(
+        $font-family: $goa-font-families-default,
+          //Heading 1 (h1)
+        $headline-5: mat.define-typography-level(
+                        $goa-font-size-10,
+                        $goa-line-height-7,
+                        $goa-font-weight-bold
+        ),
+          // Heading 2 (h2)
+        $headline-6: mat.define-typography-level(
+                        $goa-font-size-9,
+                        $goa-line-height-6,
+                        $goa-font-weight-regular
+        ),
+          // h3
+        $subtitle-1: mat.define-typography-level(
+                        $goa-font-size-7,
+                        $goa-line-height-4,
+                        $goa-font-weight-regular
+        ),
+          // h4
+        $subtitle-2: mat.define-typography-level(
+                        $goa-font-size-4,
+                        $goa-line-height-3,
+                        $goa-font-weight-bold
+        ),
+        $body-1: mat.define-typography-level(
+                        $goa-font-size-4,
+                        $goa-line-height-2,
+                        $goa-font-weight-regular
+        ),
+        $body-2: mat.define-typography-level(
+                        $goa-font-size-4,
+                        $goa-line-height-2,
+                        $goa-font-weight-bold
+        ),
+        $caption: mat.define-typography-level(
+                        $goa-font-size-7,
+                        $goa-line-height-4,
+                        $goa-font-weight-regular
+        ),
+        $button: mat.define-typography-level(
+                        $goa-font-size-4,
+                        $goa-line-height-2,
+                        $goa-font-weight-regular
+        )
+);
+$theme: mat.define-light-theme((
+        color: (
+                primary: $goa-primary-palette,
+                accent: $goa-accent-palette,
+                warn: $goa-emergency-palette
+        ),
+        typography: $goa-typography
+));

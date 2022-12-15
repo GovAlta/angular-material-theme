@@ -1,7 +1,7 @@
 {
   "name": "@abgov/angular-material-theme",
   "version": "0.0.0",
-  "main": "./index.js",
+  "description": "SCSS themes for @abgov/angular-material-theme library",
   "repository": {
     "type": "git",
     "url": "https://github.com/GovAlta/angular-material-theme.git"
@@ -15,22 +15,78 @@
     "theme"
   ],
   "dependencies": {
-    "@abgov/design-tokens": "^1.0.4",
-    "@angular/material": "^15.0.2"
+    "@abgov/design-tokens": "v1.0.5-dev.7",
+    "@angular/cdk": "^15.0.3",
+    "@angular/material": "^15.0.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.20"
   },
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.7",
+    "autoprefixer": "^10.4.13",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.57.1",
     "semantic-release": "^19.0.5"
   },
   "scripts": {
-    "build": "node index.js",
+    "build:clean": "rm -Rf dist",
+    "build:autoprefixer": "postcss dist/**/*.css -r -m --no-map --use autoprefixer",
+    "build:sass": "node ./scripts/build-theme",
+    "build": "npm-run-all -s build:clean build:sass build:autoprefixer",
     "semantic-release": "semantic-release"
   },
+  "files": [
+    "dist",
+    "scripts",
+    "themes"
+  ],
   "bugs": {
     "url": "https://github.com/GovAlta/angular-material-theme/issues"
   },
   "release": {
     "branches": [
       "main"
+    ],
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "angular",
+          "releaseRules": [
+            {
+              "type": "docs",
+              "scope": "readme",
+              "release": "patch"
+            },
+            {
+              "scope": "no-release",
+              "release": false
+            }
+          ]
+        }
+      ],
+      "@semantic-release/release-notes-generator",
+      [
+        "@semantic-release/changelog",
+        {
+          "changelogFile": "CHANGELOG.md",
+          "changelogTitle": "# @abgov/angular-material-theme changelog"
+        }
+      ],
+      "@semantic-release/github",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json",
+            "CHANGELOG.md"
+          ],
+          "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
     ]
   },
   "publishConfig": {
