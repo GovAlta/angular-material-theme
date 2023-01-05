@@ -1,0 +1,30 @@
+@import "../variables";
+
+span.mat-checkbox-inner-container {
+  width: $line-height-2;
+  height: $line-height-2;
+}
+
+.mat-checkbox-frame {
+  background: $colour-text-light !important;
+  border: ($border-width-s)*1px solid $colour-greyscale-600 !important;
+}
+
+.mat-checkbox-layout {
+  .mat-checkbox-label {
+    line-height: $line-height-7;
+  }
+}
+
+.mat-checkbox-checked {
+  &.mat-primary {
+    &.mat-checkbox-background {
+      background: $colour-interactive-default;
+    }
+  }
+}
+
+.mat-checkbox {
+  font-style: normal;
+}
+

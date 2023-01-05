@@ -1,0 +1,7 @@
+@import "../variables";
+
+.mat-warn {
+  .mat-radio-outer-circle {
+   border: ($border-width-m)*1px solid $colour-status-emergency-default;
+  }
+}
