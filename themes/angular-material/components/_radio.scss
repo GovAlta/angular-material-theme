@@ -1,7 +1,11 @@
-@import "../variables";
-
-.mat-warn {
-  .mat-radio-outer-circle {
-   border: ($border-width-m)*1px solid $colour-status-emergency-default;
+/*********
+Mat Radio
+**********/
+.goa-angular {
+  .mat-warn {
+    .mat-radio-outer-circle {
+      border: $goa-border-width-m solid $goa-color-emergency-default;
+    }
   }
 }
+

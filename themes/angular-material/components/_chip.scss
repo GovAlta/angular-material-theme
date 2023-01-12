@@ -1,31 +1,42 @@
-@import "../variables";
-
-.mat-chip {
-  font-weight: $font-weight-regular;
-  font-size: $font-size-3;
-  line-height: $font-size-7;
-  &.mat-standard-chip {
-    background:none;
-    border: ($border-width-s)*1px solid $colour-text-secondary;
-    border-radius: 1rem;
-    &.mat-warn {
-      background: $colour-status-emergency-light;
+/*********
+Mat Chip
+**********/
+.goa-angular {
+  .mat-chip {
+    font-weight: $goa-font-weight-regular;
+    font-size: $goa-font-size-3;
+    line-height: $goa-font-size-7;
+    &.mat-standard-chip {
+      background:none;
+      border: $goa-border-width-s solid $goa-color-text-secondary;
+      border-radius: 1rem;
+      &.mat-warn {
+        background: $goa-color-emergency-light;
+        .mat-chip-remove {
+          size: $goa-font-size-7;
+          color: $goa-color-interactive-error;
+          &:hover {
+            opacity: 1!important;
+            color: $goa-color-interactive-error;
+          }
+        }
+      }
       .mat-chip-remove {
-        size: $font-size-7;
-        color: $colour-interactive-error;
+        &.mat-icon {
+          height: 24px!important;
+          font-size: 24px;
+        }
         &:hover {
           opacity: 1!important;
-          color: $colour-interactive-error;
+          size: $goa-font-size-7;
+          color: $goa-color-interactive-hover;
         }
       }
     }
-    .mat-chip-remove {
-      &:hover {
-        opacity: 1!important;
-        size: $font-size-7;
-        color: $colour-interactive-hover;
-      }
+    div.mat-chip-ripple {
+      display:none;
     }
   }
 }
+
 

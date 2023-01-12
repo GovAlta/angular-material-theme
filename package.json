@@ -15,7 +15,7 @@
     "theme"
   ],
   "dependencies": {
-    "@abgov/design-tokens": "^1.0.4",
+    "@abgov/design-tokens": "v1.0.5-dev.7",
     "@abgov/styles": "^1.1.0",
     "@angular/cdk": "^15.0.3",
     "@angular/material": "^15.0.2",

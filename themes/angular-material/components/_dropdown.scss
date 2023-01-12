@@ -1,21 +1,25 @@
-@import "../variables";
+/*********
+Mat Select
+**********/
+.goa-angular {
+  .mat-select {
+    font-family: $goa-font-families-default;
+    color: $goa-color-text-default;
+    background: transparent;
+  }
 
-.mat-select {
-  font-family: $font-families-default;
-  color: $colour-text-default;
-  background: transparent;
-}
+  .mat-option:hover:not(.mat-option-disabled) {
+    background: $goa-color-greyscale-100;
+    color: $goa-color-brand-dark;
+  }
 
-.mat-option:hover:not(.mat-option-disabled) {
-  background: $colour-greyscale-100;
-  color: $colour-brand-dark;
-}
-
-.mat-primary {
-  .mat-option {
-    &.mat-selected:not(.mat-option-disabled) {
-      background: $colour-interactive-hover;
-      color: $colour-text-light;
+  .mat-primary {
+    .mat-option {
+      &.mat-selected:not(.mat-option-disabled) {
+        background: $goa-color-interactive-hover;
+        color: $goa-color-text-light;
+      }
     }
   }
 }
+
