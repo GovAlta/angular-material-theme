@@ -1,7 +1,7 @@
 {
   "name": "@abgov/angular-material-theme",
   "version": "0.0.0",
-  "description": "SCSS themes for @abgov/angular-material-theme library",
+  "description": "CSS themes for Angular Material",
   "repository": {
     "type": "git",
     "url": "https://github.com/GovAlta/angular-material-theme.git"
@@ -15,7 +15,7 @@
     "theme"
   ],
   "dependencies": {
-    "@abgov/design-tokens": "v1.0.5-dev.7",
+    "@abgov/design-tokens": "^1.0.5",
     "@angular/cdk": "^15.0.3",
     "@angular/material": "^15.0.2",
     "npm-run-all": "^4.1.5",
@@ -31,10 +31,9 @@
     "semantic-release": "^19.0.5"
   },
   "scripts": {
-    "build:clean": "rm -Rf dist",
     "build:autoprefixer": "postcss dist/**/*.css -r -m --no-map --use autoprefixer",
     "build:sass": "node ./scripts/build-theme",
-    "build": "npm-run-all -s build:clean build:sass build:autoprefixer",
+    "build": "npm-run-all -s build:sass build:autoprefixer",
     "semantic-release": "semantic-release"
   },
   "files": [
