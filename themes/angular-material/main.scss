@@ -81,7 +81,7 @@ $accent: mat.define-palette($goa-accent-palette);
 $goa-emergency-palette: mat.$red-palette;
 $warn: mat.define-palette($goa-emergency-palette, 900);
 $goa-typography: mat.define-typography-config(
-        $font-family: $goa-font-families-default,
+        $font-family: $goa-font-family-sans,
           //Heading 1 (h1)
         $headline-5: mat.define-typography-level(
                         $goa-font-size-10,

@@ -10,12 +10,12 @@ Mat Checkbox
 
   .mat-checkbox {
     span.mat-checkbox-inner-container {
-      width: $goa-spacing-l;
-      height: $goa-spacing-l;
+      width: $goa-space-l;
+      height: $goa-space-l;
     }
 
     &.mat-checkbox-disabled {
-      opacity: $goa-opacity-5;
+      opacity: $goa-opacity-background-modal;
 
       .mat-checkbox-label {
         color: $goa-color-text-default;

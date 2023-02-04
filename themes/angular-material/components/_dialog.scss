@@ -10,14 +10,14 @@ Mat Dialog
     color: $goa-color-text-default;
   }
   .mat-dialog-actions[align=end] {
-    margin-bottom: $goa-spacing-l;
+    margin-bottom: $goa-space-l;
   }
   .mat-dialog-actions {
     margin: 0;
     padding: 0;
 
     :not(:last-child) {
-      margin-right: $goa-spacing-l;
+      margin-right: $goa-space-l;
     }
   }
 }

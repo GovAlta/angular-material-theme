@@ -4,8 +4,8 @@ Mat Select
 .goa-angular {
   .mat-form-field-type-mat-select.mat-form-field-appearance-outline .mat-form-field-infix {
     padding: 0 0 1em 0;
-    margin-bottom: $goa-spacing-s;
-    height: $goa-spacing-l;
+    margin-bottom: $goa-space-s;
+    height: $goa-space-l;
   }
   // Active option has text color
   .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
@@ -59,8 +59,8 @@ Mat Select
     .mat-option-text {
       white-space: normal;
       line-height: $goa-line-height-3;
-      padding-top: $goa-spacing-s;
-      padding-bottom: $goa-spacing-s;
+      padding-top: $goa-space-s;
+      padding-bottom: $goa-space-s;
     }
   }
 }

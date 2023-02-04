@@ -4,7 +4,7 @@ Mat Button
 .goa-angular {
   button:disabled {
     pointer-events: none;
-    opacity: $goa-opacity-5;
+    opacity: $goa-opacity-background-modal;
   }
 
   .mat-button .mat-button-wrapper > * {
@@ -36,20 +36,20 @@ Mat Button
   }
 
   .mat-button-base {
-    font-family: $goa-font-families-default;
+    font-family: $goa-font-family-sans;
     font-size: $goa-font-size-5;
-    letter-spacing: $goa-letter-spacing-1;
-    padding: 0 $goa-spacing-s;
+    letter-spacing: $goa-letter-spacing-button;
+    padding: 0 $goa-space-s;
     align-items: center;
     &.tall {
-      height: $goa-spacing-2xl;
+      height: $goa-space-2xl;
       font-weight: $goa-font-weight-bold;
     }
     // Tertiary button
     &.mat-button {
       &.mat-primary {
         text-align: center;
-        letter-spacing: $goa-letter-spacing-1;
+        letter-spacing: $goa-letter-spacing-button;
         text-decoration-line: underline;
         color: $goa-color-interactive-default;
 

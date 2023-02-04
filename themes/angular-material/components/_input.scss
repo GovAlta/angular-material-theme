@@ -27,14 +27,14 @@ Mat Input
     .mat-form-field-infix {
       border-top-width: $goa-border-width-l;
       padding: 0 0 1em 0;
-      margin-bottom: $goa-spacing-s;
+      margin-bottom: $goa-space-s;
       height: $goa-line-height-2;
       input {
-        padding-top: $goa-spacing-s;
-        padding-bottom: $goa-spacing-s;
+        padding-top: $goa-space-s;
+        padding-bottom: $goa-space-s;
         color: $goa-color-text-default;
         font-size: $goa-font-size-4;
-        line-height: calc($goa-line-height-5 - calc($goa-spacing-xs) * 2);
+        line-height: calc($goa-line-height-5 - calc($goa-space-xs) * 2);
         background-color: transparent;
         &:disabled {
           color: $goa-color-text-secondary;
@@ -48,7 +48,7 @@ Mat Input
       align-self: stretch;
       align-items: center;
       justify-content: center;
-      width: $goa-spacing-2xl;
+      width: $goa-space-2xl;
       .mat-icon {
         cursor: pointer;
       }
@@ -59,12 +59,12 @@ Mat Input
         align-self: stretch;
         align-items: center;
         justify-content: center;
-        width: $goa-spacing-2xl;
+        width: $goa-space-2xl;
 
         background-color: $goa-color-interactive-default;
         color: $goa-color-text-light;
 
-        border-radius: 0 $goa-border-radius-4 $goa-border-radius-4 0;
+        border-radius: 0 $goa-border-radius-m $goa-border-radius-m 0;
 
         cursor: pointer;
 
@@ -79,13 +79,13 @@ Mat Input
         }
       }
 
-      margin-bottom: $goa-spacing-2xs;
-      margin-right: -$goa-spacing-s;
+      margin-bottom: $goa-space-2xs;
+      margin-right: -$goa-space-s;
     }
 
     .clear-suffix.interactive-suffix .mat-form-field-suffix {
-      width: 2 * $goa-spacing-2xl;
-      margin-right: -$goa-spacing-l;
+      width: 2 * $goa-space-2xl;
+      margin-right: -$goa-space-l;
     }
   }
 }
