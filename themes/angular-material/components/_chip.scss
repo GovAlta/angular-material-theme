@@ -1,0 +1,42 @@
+/*********
+Mat Chip
+**********/
+.goa-angular {
+  .mat-chip {
+    font-weight: $goa-font-weight-regular;
+    font-size: $goa-font-size-3;
+    line-height: $goa-font-size-7;
+    &.mat-standard-chip {
+      background:none;
+      border: $goa-border-width-s solid $goa-color-text-secondary;
+      border-radius: 1rem;
+      &.mat-warn {
+        background: $goa-color-emergency-light;
+        .mat-chip-remove {
+          size: $goa-font-size-7;
+          color: $goa-color-interactive-error;
+          &:hover {
+            opacity: 1!important;
+            color: $goa-color-interactive-error;
+          }
+        }
+      }
+      .mat-chip-remove {
+        &.mat-icon {
+          height: $goa-icon-size-l;
+          font-size: $goa-icon-size-l;
+        }
+        &:hover {
+          opacity: 1;
+          size: $goa-font-size-7;
+          color: $goa-color-interactive-hover;
+        }
+      }
+    }
+    div.mat-chip-ripple {
+      display:none;
+    }
+  }
+}
+
+

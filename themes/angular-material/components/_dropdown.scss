@@ -1,0 +1,67 @@
+/*********
+Mat Select
+**********/
+.goa-angular {
+  .mat-form-field-type-mat-select.mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 0 0 1em 0;
+    margin-bottom: $goa-space-s;
+    height: $goa-space-l;
+  }
+  // Active option has text color
+  .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: $goa-color-text-light;
+  }
+  .mat-select-panel .mat-option.mat-selected {
+    background: $goa-color-interactive-hover;
+  }
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    color: $goa-color-text-secondary;
+  }
+  .mat-form-field-appearance-outline {
+    &.mat-focused {
+      .mat-form-field-outline-thick {
+        color: $goa-color-interactive-focus;
+      }
+    }
+    &:not(.mat-focused) {
+      .mat-form-field-outline-thick {
+        color: $goa-color-interactive-hover;
+      }
+    }
+  }
+  mat-form-field {
+    width: 100%;
+  }
+
+  .mat-select-value-text {
+    color: $goa-color-text-default;
+  }
+  .mat-select-placeholder {
+    position: relative;
+    top: -6px;
+  }
+  .mat-select-arrow {
+    color: $goa-color-text-default;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3Cpath class='cls-1' d='M11.29,15.7a1,1,0,0,0,1.41,0l6-6A1,1,0,1,0,17.29,8.3L12,13.58,6.71,8.3a1,1,0,0,0-1.42,0,1,1,0,0,0,0,1.41Z'/%3E%3C/svg%3E%0A");
+    border: transparent;
+    top: 6px;
+    left: 6px;
+    width: $goa-icon-size-l;
+    height: $goa-icon-size-l;
+    pointer-events: none;
+  }
+  .select-panel-wrapped-options {
+    .mat-option {
+      height: unset;
+      border-bottom: $goa-border-width-s solid $goa-color-greyscale-200;
+    }
+
+    .mat-option-text {
+      white-space: normal;
+      line-height: $goa-line-height-3;
+      padding-top: $goa-space-s;
+      padding-bottom: $goa-space-s;
+    }
+  }
+}
+

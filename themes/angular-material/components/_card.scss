@@ -1,0 +1,148 @@
+/*********
+Mat Card
+**********/
+.goa-angular {
+  .mat-card {
+    border: $goa-border-width-s solid $goa-color-greyscale-200;
+    background-color: $goa-color-greyscale-white;
+    overflow: hidden;
+    padding: 0;
+    // mat-card doesn't have a box shadow
+    &:not([class*=mat-elevation-z]) {
+      box-shadow: none;
+    }
+    .goa-container--non-interactive {
+      &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
+        background: $goa-color-greyscale-100;
+        border-color: $goa-color-greyscale-200;
+      }
+
+      &.goa-container--accent-thin {
+        border-top: $goa-space-xs solid $goa-color-greyscale-200;
+      }
+
+      &.goa-container--accent-thick {
+        border-top: $goa-space-l solid $goa-color-greyscale-200;
+      }
+
+      .mat-card-header {
+        background-color: $goa-color-greyscale-100;
+        border-color: $goa-color-greyscale-200;
+        color: $goa-color-greyscale-black;
+      }
+    }
+
+    .goa-container--primary {
+      .mat-card-header {
+        background: $goa-color-brand-default;
+        color: $goa-color-text-light;
+      }
+    }
+
+    .goa-container--info {
+      &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
+        background:  $goa-color-info-background;
+        border-color: $goa-color-info-default;
+      }
+
+      &.goa-container--accent-thin {
+        border-top: $goa-space-xs solid $goa-color-brand-default;
+      }
+
+      &.goa-container--accent-thick {
+        border-top: $goa-space-l solid $goa-color-brand-default;
+      }
+    }
+
+    .goa-container--error {
+      &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
+        background: $goa-color-emergency-background;
+        border-color: $goa-color-emergency-default;
+      }
+
+      &.goa-container--accent-thin {
+        border-top: $goa-space-xs solid $goa-color-interactive-error;
+      }
+
+      &.goa-container--accent-thick {
+        border-top: $goa-space-l solid $goa-color-interactive-error;
+      }
+    }
+
+    .goa-container--success {
+      &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
+        background: $goa-color-success-background;
+        border-color: $goa-color-success-default;
+      }
+
+      &.goa-container--accent-thin {
+        border-top: $goa-space-xs solid $goa-color-success-default;
+      }
+
+      &.goa-container--accent-thick {
+        border-top: $goa-space-l solid $goa-color-success-default;
+      }
+    }
+
+    .goa-container--important {
+      &:not(.goa-container--accent-thin, .goa-container--accent-thick, .goa-container--accent) {
+        background: $goa-color-warning-background;
+        border-color: $goa-color-warning-default;
+      }
+
+      &.goa-container--accent-thin {
+        border-top: $goa-space-xs solid $goa-color-interactive-focus;
+      }
+
+      &.goa-container--accent-thick {
+        border-top: $goa-space-xs solid $goa-color-interactive-focus;
+      }
+    }
+
+    .mat-card-content {
+      padding: $goa-space-m;
+      .mat-card-title {
+        font-weight: $goa-font-weight-regular;
+        font-size: $goa-font-size-7;
+        line-height: $goa-line-height-4;
+        text-decoration-line: underline;
+        color: $goa-color-interactive-default;
+        border-bottom: none;
+        margin-bottom: $goa-space-3xs;
+      }
+    }
+    .mat-card-image {
+      width: calc(100% + 0px);
+      margin: 0 0 0 0;
+    }
+    .mat-card-header {
+      border-style: solid;
+      border-width: $goa-border-width-s;
+      border-radius: $goa-border-radius-m $goa-border-radius-m 0 0;
+      font-weight: $goa-font-weight-bold;
+      padding-top: $goa-space-xs;
+      padding-bottom: $goa-space-xs;
+      .mat-card-header-text {
+        line-height: $goa-line-height-4;
+        margin: 0 $goa-space-xs;
+      }
+      .mat-card-subtitle,
+      .mat-card-subtitle:not(:first-child) {
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+    }
+
+    .mat-card-subtitle {
+      margin-bottom: $goa-space-m;
+    }
+
+    .mat-card-actions {
+      margin: 0;
+    }
+    @media (min-width: 320px) {
+      margin: 0 auto;
+    }
+  }
+}
+

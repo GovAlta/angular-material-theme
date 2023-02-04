@@ -1,0 +1,26 @@
+/*********
+Mat Radio
+**********/
+.goa-angular {
+  .mat-form-field-invalid,
+  .mat-form-field-appearance-legacy .mat-form-field-underline,
+  .mat-form-field-appearance-legacy,
+  .mat-form-field-underline,
+  .mat-form-field-ripple,
+  .mat-form-field-appearance-legacy .mat-form-field-ripple,
+  .mat-form-field-appearance-legacy.mat-focused .mat-form-field-underline,
+  .mat-form-field-appearance-legacy.mat-form-field-invalid,
+  .mat-form-field-underline,
+  .mat-form-field-appearance-legacy.mat-focused .mat-form-field-ripple {
+    background-color: transparent;
+  }
+
+  .mat-form-field-invalid .mat-radio-outer-circle {
+    border-color: red;
+  }
+
+  .mat-radio-group {
+    margin: $goa-space-s 0 0;
+  }
+}
+
