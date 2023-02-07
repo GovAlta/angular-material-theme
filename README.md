@@ -19,15 +19,14 @@ npm install @abgov/angular-material-theme
 ````
 
 ## Usage
-Under your main styles.css, add the below import: 
+- Step 1: Under your main styles.css, add the below import: 
 ```
 @import "@abgov/angular-material-theme/dist/angular-material/styles.min.css";
 ```
 
-Under your main app.component.ts, add the below:
+- Step 2: Under your main app.component.ts, add the below:
 ```
 export class AppComponent {
-  title = 'testing-angular';
   @HostBinding('class') class = 'goa-angular';
 }
 ```
