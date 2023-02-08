@@ -1,23 +1,11 @@
 /*********
 Mat Dialog
 **********/
-.goa-angular {
-  .mat-dialog-title {
-    font-size: $goa-font-size-7;
-  }
-  .mat-dialog-container {
-    line-height: $goa-line-height-3;
-    color: $goa-color-text-default;
-  }
-  .mat-dialog-actions[align=end] {
-    margin-bottom: $goa-space-l;
-  }
-  .mat-dialog-actions {
-    margin: 0;
-    padding: 0;
-
-    :not(:last-child) {
-      margin-right: $goa-space-l;
-    }
-  }
+.mat-dialog-title {
+  font-size: $goa-font-size-7;
+  margin: 0 40px 1.5rem 0;
+}
+.mat-dialog-container {
+  line-height: $goa-line-height-3;
+  color: $goa-color-text-default;
 }

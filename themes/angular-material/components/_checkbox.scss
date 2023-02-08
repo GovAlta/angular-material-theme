@@ -2,74 +2,71 @@
 Mat Checkbox
 **********/
 .goa-angular {
-
   // Remove animation, background when hover
   .mat-ripple-element {
     display: none;
   }
+}
+.mat-checkbox {
+  span.mat-checkbox-inner-container {
+    width: $goa-space-l;
+    height: $goa-space-l;
+  }
 
-  .mat-checkbox {
-    span.mat-checkbox-inner-container {
-      width: $goa-space-l;
-      height: $goa-space-l;
-    }
-
-    &.mat-checkbox-disabled {
-      opacity: $goa-opacity-background-modal;
-
-      .mat-checkbox-label {
-        color: $goa-color-text-default;
-      }
-    }
+  &.mat-checkbox-disabled {
+    opacity: $goa-opacity-background-modal;
 
     .mat-checkbox-label {
-      line-height: $goa-line-height-7;
+      color: $goa-color-text-default;
+    }
+  }
+
+  .mat-checkbox-label {
+    line-height: $goa-line-height-7;
+  }
+
+  // Primary checkbox
+  &.mat-primary {
+    &.cdk-keyboard-focused {
+      .mat-checkbox-background {
+        border: $goa-border-width-l solid $goa-color-interactive-focus;
+      }
     }
 
-    // Primary checkbox
-    &.mat-primary {
-      &.cdk-keyboard-focused {
-        .mat-checkbox-background {
-          border: $goa-border-width-l solid $goa-color-interactive-focus;
-        }
-      }
+    .mat-checkbox-frame {
+      background: $goa-color-text-light;
+      border: $goa-border-width-s solid $goa-color-text-secondary;
+    }
 
-      .mat-checkbox-frame {
-        background: $goa-color-text-light;
-        border: $goa-border-width-s solid $goa-color-text-secondary;
-      }
+    &.mat-checkbox-checked {
+      .mat-checkbox-background {
+        background-color: $goa-color-interactive-default;
 
-      &.mat-checkbox-checked {
-        .mat-checkbox-background {
-          background-color: $goa-color-interactive-default;
-
-          &:hover, &:focus {
-            .mat-checkbox-background {
-              background-color: $goa-color-interactive-hover;
-            }
+        &:hover, &:focus {
+          .mat-checkbox-background {
+            background-color: $goa-color-interactive-hover;
           }
         }
       }
     }
+  }
 
-    // Error checkbox
-    &.mat-warn {
-      // Border of the error checkbox
-      .mat-checkbox-frame {
+  // Error checkbox
+  &.mat-warn {
+    // Border of the error checkbox
+    .mat-checkbox-frame {
+      border: $goa-border-width-s solid $goa-color-interactive-error;
+    }
+
+    &.mat-checkbox-checked {
+      .mat-checkbox-background {
+        background-color: $goa-color-text-light;
         border: $goa-border-width-s solid $goa-color-interactive-error;
       }
 
-      &.mat-checkbox-checked {
-        .mat-checkbox-background {
-          background-color: $goa-color-text-light;
-          border: $goa-border-width-s solid $goa-color-interactive-error;
-        }
-
-        .mat-checkbox-checkmark-path {
-          stroke: $goa-color-interactive-error !important;
-        }
+      .mat-checkbox-checkmark-path {
+        stroke: $goa-color-interactive-error !important;
       }
     }
   }
 }
-

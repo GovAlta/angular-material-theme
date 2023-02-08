@@ -2,6 +2,13 @@
 Mat Input
 **********/
 .goa-angular {
+  .mat-form-field-appearance-outline {
+    &.mat-focused {
+      .mat-form-field-outline {
+        transition: none;
+      }
+    }
+  }
   .wrapper {
     display:flex;
     align-items: center;
@@ -9,7 +16,7 @@ Mat Input
   .mat-form-field-type-mat-input {
     transition: none;
     &.mat-form-field-appearance-outline {
-      &.mat-form-field-invalid {
+      &:not(.mat-form-field-invalid) {
         .mat-form-field-outline-thick {
           color: $goa-color-interactive-focus;
         }
@@ -18,6 +25,11 @@ Mat Input
         .mat-form-field-outline {
           background-color: $goa-color-greyscale-100;
           border-color: $goa-color-greyscale-200;
+        }
+      }
+      &.mat-form-field-invalid {
+        &.mat-form-field-outline-thick {
+          color: $goa-color-interactive-error;
         }
       }
       .mat-form-field-wrapper {
